@@ -61,7 +61,7 @@ def chat(m):
     idA, cid = m.chat.id, m.chat.id
     str = m.text
     txt = str.replace("/chat", "")
-    bot.send_message(idA, "<b>Thank you very much! Details to your Message :\n Message :</b> {} \n<b>Chat-Id :</b> {} \n<b>I will answer you as soon as possible</b>".format(txt,idA), parse_mode="HTML")
+    bot.send_message(idA, "<b>Tnx Message sent. </b>".format(txt,idA), parse_mode="HTML")
     bot.send_message('-114328168', "<b>#NEW MSG\n Chat-Id:</b> {} \n<b>Msg :</b> {}".format(idA,txt), parse_mode="HTML")
     bot.send_message(idA, "<b>This is a confirmation that we received your Message </b>", parse_mode="HTML")
 
