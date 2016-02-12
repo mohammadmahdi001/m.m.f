@@ -40,7 +40,7 @@ def on_user_joins(m):
 			username = m.new_chat_participant.username
 			groupname = m.chat.title
 			groupid = m.chat.id
-			bot.send_message('-84875656', "# DEBUG # " + "Bot got invited to the group " + str(groupname) + "(" + str(groupid) + ")", parse_mode="HTML")
+			bot.send_message('-114328168', "# DEBUG # " + "Bot got invited to the group " + str(groupname) + "(" + str(groupid) + ")", parse_mode="HTML")
 
 
 
@@ -62,7 +62,7 @@ def chat(m):
     str = m.text
     txt = str.replace("/chat", "")
     bot.send_message(idA, "<b>Thank you very much! Details to your Message :\n Message :</b> {} \n<b>Chat-Id :</b> {} \n<b>I will answer you as soon as possible</b>".format(txt,idA), parse_mode="HTML")
-    bot.send_message('-84875656', "<b>#NEW MSG\n Chat-Id:</b> {} \n<b>Msg :</b> {}".format(idA,txt), parse_mode="HTML")
+    bot.send_message('-114328168', "<b>#NEW MSG\n Chat-Id:</b> {} \n<b>Msg :</b> {}".format(idA,txt), parse_mode="HTML")
     bot.send_message(idA, "<b>This is a confirmation that we received your Message </b>", parse_mode="HTML")
 
 
@@ -79,7 +79,7 @@ def answer(m):
         txt = m.text.split()[2:]
         text = ' '.join(txt)
         from_id = m.from_user.first_name
-        bot.send_message(to_id, "<b>Staff</b> <i>{}</i> <b>has answered your question:</b>\n <i>{}</i>".format(from_id,text), parse_mode="HTML")
+        bot.send_message(to_id, "<i>{}</i>".format(from_id,text), parse_mode="HTML")
      
      
 @bot.message_handler(commands=['bb'])
@@ -141,7 +141,7 @@ def welcome(m):
 				with open('user.txt', 'a') as f:
 					f.write(str(id)+"\n")
 		                print "New user received."
-	                        bot.send_message(id, "use /chat <MSG>  for send me a Message ", parse_mode="Markdown")
+	                        bot.send_message(id, "hi! use /chat <MSG>  for send me a Message ", parse_mode="Markdown")
         return
 @bot.message_handler(commands=['stats'])
 def check(m):
