@@ -48,7 +48,7 @@ def on_user_joins(m):
 @bot.message_handler(commands=['credits'])
 def credits(m):
 	cid = m.chat.id
-	bot.send_message(cid, "@it_s_me_lol ", parse_mode="Markdown")
+	bot.send_message(cid, "@it_s_me_lol", parse_mode="Markdown")
 
 @bot.message_handler(commands=['help'])
 def help(m):
@@ -61,7 +61,7 @@ def chat(m):
     idA, cid = m.chat.id, m.chat.id
     str = m.text
     txt = str.replace("/chat", "")
-    bot.send_message(idA, "<b>Tnx Message sent. </b>".format(txt,idA), parse_mode="HTML")
+    bot.send_message(idA, "<b>Tnx. Message sent. </b>".format(txt,idA), parse_mode="HTML")
     bot.send_message('-114328168', "<b>#NEW MSG\n Chat-Id:</b> {} \n<b>Msg :</b> {}".format(idA,txt), parse_mode="HTML")
     bot.send_message(idA, "<b>This is a confirmation that we received your Message </b>", parse_mode="HTML")
 
